@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,82 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
 </head>
+
 <body>
-    <div class="flex flex-row">
-        <h1 class="text-3xl">Hello World</h1>
-        <ol>
-            <li>Member 1</li>
-            <li>Member 2</li>
-        </ol>
+
+    <!-- header -->
+    <div class="w-full h-[6rem] flex flex-row justify-around items-center">
+        <img src="img/logo2.png" class="w-[15rem]">
+        <ul class="flex flex-row justify-between items-center gap-10">
+            <a href="index.html">
+                <li class="hover:text-[#0080FF] cursor-pointer">Home</li>
+            </a>
+            <a>
+                <li class="hover:text-[#0080FF] cursor-pointer">Amenities</li>
+            </a>
+            <a>
+                <li class="hover:text-[#0080FF] cursor-pointer">Rates</li>
+            </a>
+            <a>
+                <li class="hover:text-[#0080FF] cursor-pointer">About Us</li>
+            </a>
+            <a>
+                <li class="hover:text-[#0080FF] cursor-pointer">Location</li>
+            </a>
+        </ul>
     </div>
+
+
+    <div class="swiper-container w-full h-[500px]">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative">
+                <img src="img/slider6.png" class="absolute z-0 inset-0 w-full h-full object-cover">
+
+                <div
+                    class="w-[45%] absolute z-10 top-0 right-0 h-full w-1/2 bg-blue-500 bg-opacity-75 flex justify-center items-center text-center">
+                    <h1 class="text-white text-[2.2rem] mx-20 px-10 font-semibold">Explore new horizons and create
+                        unforgettable adventures</h1>
+                </div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="img/slider2.jpg" class="w-full h-full object-cover">
+                <div
+                    class="w-[45%] absolute z-10 top-0 left-0 h-full w-1/2 bg-blue-500 bg-opacity-75 flex justify-center items-center text-center">
+                    <h1 class="text-white text-[2.2rem] mx-20 px-10 font-semibold">Escape to paradise at our resort,
+                        where relaxation meets adventure</h1>
+                </div>
+            </div> 
+            <div class="swiper-slide relative">
+                <img src="img/slider5.jpg" class="w-full h-full object-cover">
+                <div
+                    class="w-[45%] absolute z-10 top-0 right-0 h-full w-1/2 bg-blue-500 bg-opacity-75 flex justify-center items-center text-center">
+                    <h1 class="text-white text-[2.2rem] mx-20 px-10 font-semibold">Unwind in luxury and style in a stunning tropical setting</h1>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-button-next text-white"></div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
 </body>
+
 </html>
